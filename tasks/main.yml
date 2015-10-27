@@ -1,0 +1,8 @@
+---
+- name: (RedHat) install ELRepo key
+  when: ansible_os_family == "RedHat"
+  rpm_key: state=present key='https://www.elrepo.org/RPM-GPG-KEY-elrepo.org'
+
+- name: (RedHat) install ELRepo
+  when: ansible_os_family == "RedHat"
+  yum: state=present name='http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm'
