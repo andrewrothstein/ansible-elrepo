@@ -1,0 +1,2 @@
+---
+elrepo_url : '{{elrepo_mirror}}/{{elrepo_rpm}}'
