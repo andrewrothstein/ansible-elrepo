@@ -1,0 +1,15 @@
+---
+- name: (RedHat) install ELRepo key
+  rpm_key: state=present key='https://www.elrepo.org/RPM-GPG-KEY-elrepo.org'
+
+- name: (RedHat) get rpm...
+  get_url: >-
+    url={{elrepo_url}}
+    dest=/tmp/{{elrepo_rpm}}
+    owner=root
+    group=root
+    mode=0644
+    timeout={{elrepo_timeout_seconds}}
+  
+- name: (RedHat) install ELRepo
+  package: state=present name=/tmp/{{elrepo_rpm}}
