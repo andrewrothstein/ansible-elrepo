@@ -1,4 +1,4 @@
 ---
-- name: (RedHat) install...
-  when: ansible_os_family == "RedHat"
-  include: RedHat.yml
+- name: (EL) install...
+  when: ansible_os_family == "RedHat" and ansible_distribution != "Fedora"
+  include: EL.yml
