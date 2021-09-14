@@ -1,2 +1,4 @@
 ---
-elrepo_url : '{{elrepo_mirror}}/{{elrepo_rpm}}'
+elrepo_rpm_gpg_url: '{{ elrepo_mirror }}/RPM-GPG-KEY-elrepo.org'
+elrepo_rpm : elrepo-release-{{ ansible_distribution_major_version }}.el{{ ansible_distribution_major_version }}.elrepo.noarch.rpm
+elrepo_rpm_url: '{{ elrepo_mirror }}/{{ elrepo_rpm }}'
