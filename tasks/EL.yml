@@ -7,7 +7,7 @@
     state: present
 
 - name: installing {{ elrepo_rpm_url }}
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ elrepo_rpm_url }}'
