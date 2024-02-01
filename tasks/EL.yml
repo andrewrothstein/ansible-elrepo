@@ -1,14 +1,14 @@
 ---
-- name: adding key {{ elrepo_rpm_gpg_url }}
+- name: Adding key {{ elrepo_rpm_gpg_url }}
   become: true
   become_user: root
-  rpm_key:
+  ansible.builtin.rpm_key:
     key: '{{ elrepo_rpm_gpg_url }}'
     state: present
 
-- name: installing {{ elrepo_rpm_url }}
+- name: Installing {{ elrepo_rpm_url }}
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ elrepo_rpm_url }}'
     state: present

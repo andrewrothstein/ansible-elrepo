@@ -1,15 +1,16 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: configures ELREPO
   company: BlackRock
-  license:
-    - MIT
-  min_ansible_version: 2.0
+  description: configures ELREPO
+  galaxy_tags:
+    - development
+  license: MIT
+  min_ansible_version: '2.0'
+  namespace: andrewrothstein
   platforms:
     - name: EL
       versions:
-        - 8
-        - 9
-  galaxy_tags:
-    - development
+        - '8'
+        - '9'
+  role_name: elrepo

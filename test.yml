@@ -1,4 +1,5 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.elrepo
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
